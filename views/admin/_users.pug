@@ -1,0 +1,24 @@
+mixin users(users)
+    section#users.section.section-users.grey.lighten-4
+        .row
+            .col.s12
+                .card
+                    .card-content
+                        .card-title Регистрирани Потребители
+                        table.striped
+                            thead
+                                tr
+                                    th Име
+                                    th Потребителско име
+                                    th Електронна поща
+                                    th Регистриран на
+                                    th
+                            tbody
+                                each user in users
+                                    tr
+                                        td=user.name
+                                        td=user.username
+                                        td=user.email
+                                        td=user.date
+                                        td
+                                            a.btn.red X

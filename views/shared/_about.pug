@@ -1,0 +1,18 @@
+mixin about(aboutData)
+    section#about.scrollspy.section-about.grey.lighten-4
+        .container
+            .row
+                h4.grey.lighten-2.center
+                    span.grey-text.text-darken-2=about.title
+                each paragraph in about.textParagraphs
+                    p=paragraph  
+            .row
+                each card in about.cards
+                    .col.s12.m12.l4
+                        .card.about-box
+                            .card-content
+                                span.card-title
+                                    i.material-icons.icon-custom.grey-text.text-darken-2=card.icon
+                                    =card.title
+                                each cardParagraph in card.textParagraphs
+                                    p=cardParagraph

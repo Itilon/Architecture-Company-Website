@@ -1,0 +1,12 @@
+mixin gallery(projects)
+    section#gallery.scrollspy.section-gallery.grey.darken-2
+        .container
+            .row
+                h4.grey.center
+                        span.grey-text.text-lighten-4 Нашите проекти
+                .gallery
+                    each projectSnapshot in projectSnapshots
+                        .gallery-item
+                            div(class=`hover-img-${projectSnapshot.id}` style=`background-image: url("${projectSnapshot.url}")`)
+                            .a.btn-floating.btn-small.waves-effect.waves-light
+                                i.material-icons.white-text mouse

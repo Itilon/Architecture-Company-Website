@@ -1,0 +1,27 @@
+mixin contact(contacts)
+    section#contact.scrollspy.section-contact.grey.lighten-4
+        .container
+            .row
+                .col.s12.m6.l8
+                    h4.grey.lighten-2.center
+                        span.grey-text.text-darken-2 За контакт
+                    form(action="/contact" method="post")
+                        .input-field
+                            input#name(type="text" name="name" minlength="3" maxlength="30" required)
+                            label(for="name") Име
+                        .input-field
+                            input#email(type="email" name="email" required)
+                            label(for="email") Електронна поща
+                        .input-field
+                            textarea#message.materialize-textarea(name="message")
+                            label(for="message") Съобщение
+                        button.btn.btn-custom.waves-effect.waves-light Изпрати
+                .col.s12.m6.l4
+                    .contact-wrapper
+                        each contact in contacts
+                            .contact-box
+                                h6
+                                    span=contact.title
+                                    i.material-icons.icon-custom.grey-text.text-darken-2=contact.icon
+                                each value in contact.values
+                                    p=value

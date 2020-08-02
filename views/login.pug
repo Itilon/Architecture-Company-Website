@@ -1,0 +1,14 @@
+extends shared/_master
+
+block body
+    section.section-login.grey.lighten-4
+        .container
+            .col.s12.m8.offset-m2.l6.offset-l3
+                form.grey.lighten-2(action="/login" method="post")
+                    .input-field
+                        input#username(type="text" name="username" minlength="3" maxlength="30" required)
+                        label(for="username") Потребителско име
+                    .input-field
+                        input#password(type="password" name="password" minlength="6" maxlength="30" required)
+                        label(for="password") Парола
+                    button.btn.btn-custom.waves-effect.waves-light Влез

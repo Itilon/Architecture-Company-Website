@@ -1,0 +1,51 @@
+extends admin/_master
+include admin/_users
+
+block body
+    nav.blue.darken-2
+        .container
+            .nav-wrapper
+                a.brand-logo(href="")
+            ul.right.hide-on-med-and-down
+                li
+                    a(href="") Начало
+                li
+                    a(href="#users") Потребители
+                li
+                    a(href="") Страници
+                li
+                    a(href="") Съобщения
+                li
+                    a(href="") Изход
+    +users(users)
+    
+        
+    section.section.section-pages.blue-lighten-4
+
+    .fixed-action-btn
+        a.btn-floating.btn-large
+            i.material-icons mode_edit
+        ul
+            li
+                a.modal-trigger.btn-floating.blue(href="#user-modal")
+                    i.material-icons supervisor_account
+    
+    #user-modal.modal
+        .modal-content
+            form(action="/addUser" method="post")
+                .input-field
+                    input#name(type="text" name="name")
+                    label(for="name") Име
+                .input-field
+                    input#username(type="text" name="username")
+                    label(for="name") Потребителско име
+                .input-field
+                    input#email(type="email" name="email")
+                    label(for="email") Електронна поща
+                .input-field
+                    input#password(type="password" name="password")
+                    label(for="password") Парола
+                .input-field
+                    input#confirm-password(type="password" name="confirmedPassword")
+                    label(for="confirm-password") Потвърди паролата
+                button.btn.btn-custom.modal-action.modal-close.blue.white-text Добави нов потребител

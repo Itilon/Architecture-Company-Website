@@ -1,0 +1,20 @@
+extends shared/_master
+include shared/_home
+include shared/_sidenav
+include shared/_about
+include shared/_gallery
+include shared/_contact
+include shared/_footer
+include shared/_modal
+
+block body
+    +home(links)
+    +sidenav(links)
+    +about(about)
+    +gallery(projects)
+    +contact(contacts)
+    +footer
+    +modal
+    a.btn-floating.btn-small.btn-arrow.waves-effect.waves-light.hidden
+        i.material-icons expand_less
+        

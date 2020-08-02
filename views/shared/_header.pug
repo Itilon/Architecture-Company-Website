@@ -1,0 +1,13 @@
+mixin header(links)
+    .navbar-fixed
+        nav.navbar-custom.white
+            .container
+                .nav-wrapper
+                    a.brand-logo(href="/")
+                        img(src="static/assets/logo.png", alt="Atica Logo")
+                    a.sidenav-trigger.right(href="#" data-target="mobile-nav")
+                        i.material-icons.icon-custom.grey-text.text-darken-2 menu
+                    ul.right.hide-on-med-and-down
+                        each link in links
+                            li
+                                a(href=link.link).grey-text.text-darken-2=link.name

@@ -1,0 +1,7 @@
+mixin sidenav(links)
+    ul#mobile-nav.sidenav.grey.lighten-2
+        li
+            .user-view
+        each link in links
+            li
+                a(href=link.link)=link.name

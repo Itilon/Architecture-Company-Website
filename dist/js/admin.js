@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const t=document.querySelector(".sidenav");M.Sidenav.init(t,{});const e=document.querySelectorAll(".scrollspy");M.ScrollSpy.init(e);const n=document.querySelectorAll(".fixed-action-btn");M.FloatingActionButton.init(n,{});const o=document.querySelectorAll(".modal");M.Modal.init(o,{})});
