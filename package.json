@@ -23,7 +23,7 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "pug": "^2.0.4",
-    "gulp": "^4.0.2",
+    "gulp": "^4.0.2"
   },
   "devDependencies": {
     "gulp-nodemon": "^2.4.2",
