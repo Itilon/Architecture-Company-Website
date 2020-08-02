@@ -5,7 +5,6 @@ const init = (data) => {
         const about = await aboutData.getAboutData();
         const contacts = await contactData.getAll();
         const links = await linkData.getAll();
-        console.log(links);
 
         const projectSnapshots = await projectSnapshotData.getAllProjects();
         projectSnapshots.sort((a, b) => a.id - b.id);
